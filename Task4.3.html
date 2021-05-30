@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Packages</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Baloo Bhai', cursive;
+            margin: 5px;
+            padding: 0px;
+            
+            /*background-color: #00DBDE;
+            background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);*/
+
+            background-image: linear-gradient(90deg, #9198e5 0%, #e66465 100%);
+
+        }
+
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar navbar navbar'
+                'aside section section section section section'
+                'footer footer footer footer footer footer ';
+        }
+
+        .item {
+            /*background-color: yellow;*/
+            /*border: 3px solid black;*/
+
+
+
+            padding: 12px 23px;
+        }
+
+        #navbar {
+            grid-area: navbar;
+            border-style: solid;
+            border-width: 0px 0px 5px 0px;
+            border-image: linear-gradient(45deg, rgb(85, 87, 86), rgb(250, 224, 66)) 1;
+        }
+
+        #navbar img {
+            width: 25vw;
+            height: 7vw;
+            margin: 10px 20px;
+            filter: invert(100%);
+            float: left;
+        }
+
+        #navbar div {
+            font-size: 5vw;
+            margin: 0% 33%;
+            color: #db2a02;
+            text-shadow: 4px 3px white;
+        }
+
+        .right {
+            position: absolute;
+            right: 34px;
+            top: 43px;
+            display: inline-block;
+            /*border: 2px solid yellow; */
+        }
+
+        .btn {
+            font-family: 'Baloo Bhai', cursive;
+            margin: 0px 9px;
+            background-color: black;
+            padding: 4px 14px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            font-size: 1.5vw;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: rgb(52, 87, 240);
+            color: black;
+        }
+
+        #section {
+            grid-area: section;
+        }
+
+        .parts div {
+            font-size: 3em;
+            color: brown;
+            text-decoration: underline;
+        }
+
+        .parts ul li {
+            font-size: 1.5em;
+        }
+
+        .parts ul :nth-child(1) {
+            color: rgb(222, 236, 34);
+        }
+
+        .parts ul :nth-child(3) {
+            color: rgb(167, 41, 104);
+        }
+
+        .parts ul :nth-child(5) {
+            color: rgb(41, 99, 24);
+        }
+
+        #aside {
+            grid-area: aside;
+            display: flex;
+            flex-direction: column;
+            /*justify-content: center;*/
+            align-items: center;
+            border-style: solid;
+            border-width: 0px 5px 0px 5px;
+            border-image: linear-gradient(45deg, rgb(0, 143, 104), rgb(109, 109, 110)) 1;
+        }
+
+        #aside a {
+            text-decoration: none;
+            font-size: 1.5vw;
+            margin: 10% auto;
+            color: rgb(10, 10, 10);
+            text-shadow: 2px 1px white;
+        }
+
+        #aside a:hover {
+            position: relative;
+            animation-duration: 2s;
+            animation-name: a2;
+            animation-iteration-count: 1;
+            cursor: pointer;
+        }
+
+        @keyframes a2 {
+            0% {
+                transform: scale(1, 1);
+            }
+
+            50% {
+                transform: scale(1.5, 1.5);
+            }
+
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+            border-style: solid;
+            border-width: 5px 5px 5px 5px;
+            border-image: linear-gradient(45deg, rgb(0, 143, 104), rgb(109, 109, 110)) 1;
+            color: brown;
+        }
+
+        @media (max-width:750px) {
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar navbar navbar'
+                    'aside aside aside aside aside aside'
+                    'section section section section section section'
+                    'footer footer footer footer footer footer ';
+            }
+
+            #aside a {
+                font-size: 7vw;
+                margin: 3% auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="navbar" class="item">
+            <img src="logo.png" alt="">
+            <div>Our Packages</div>
+        </div>
+
+        <div class="right">
+            <button class="btn"><a href="Task4.1.html" style="color: white; text-decoration: none;">Home</a></button>
+        </div>
+        <div id="section" class="item">
+            <div class="parts" id="a">
+                <div>Ladakh</div>
+                <ul>
+                    <li>Magical Ladakh-Air Inclusive<br>Duration: 6 Nights 7 Days<br>Tour Type: Standard<br>Price: Rs
+                        33600 (Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                    <li>Customizable-Simply Ladakh<br>Duration: 5 Nights 6 Days<br>Tour Type: Deluxe<br>Price: Rs 33390
+                        (Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                    <li>Best of Ladakh-Air Inclusive<br>Duration: 6 Nights 7 Days<br>Tour Type: Premium<br>Price: Rs
+                        51990(Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                </ul>
+            </div>
+
+            <div class="parts" id="b">
+                <div>Goa</div>
+                <ul>
+                    <li>Goa-Holiday at Morpho Resort(With Flight)<br>Duration: 3 Nights 4 Days<br>Tour Type:
+                        Standard<br>Price: Rs 11990 (Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                    <li>Goa-Indulgence at Yu Resort<br>Duration: 3 Nights 4 Days<br>Tour Type: Deluxe<br>Price: Rs 8690
+                        (Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                    <li>Goa-Holiday at Zuri White Sand Resort(With Flight)<br>Duration: 3 Nights 4 Days<br>Tour Type:
+                        Premium<br>Price: Rs 21990(Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                </ul>
+            </div>
+            <div class="parts" id="c">
+                <div>Kerela</div>
+                <ul>
+                    <li>Kerela Getaway<br>Duration: 6 Nights 7 Days<br>Tour Type: Standard<br>Price: Rs 10990 (Starting
+                        price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                    <li>Amazing Kerela<br>Duration: 4 Nights 5 Days<br>Tour Type: Deluxe<br>Price: Rs 15990 (Starting
+                        price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                    <li>Best of Kelera-Air Inclusive<br>Duration: 5 Nights 6 Days<br>Tour Type: Premium<br>Price: Rs
+                        24990(Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                </ul>
+            </div>
+            <div class="parts" id="d">
+                <div>Kashmir</div>
+                <ul>
+                    <li>Exotic Kashmir-Air Inclusive<br>Duration: 6 Nights 7 Days<br>Tour Type: Standard<br>Price: Rs
+                        25990 (Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                    <li>Customizable-Heavenly Kashmir<br>Duration: 4 Nights 5 Days<br>Tour Type: Deluxe<br>Price: Rs
+                        27990 (Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                    <li>Magical Kashmir with Ladakh<br>Duration: 9 Nights 10 Days<br>Tour Type: Premium<br>Price: Rs
+                        62990(Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                </ul>
+            </div>
+            <div class="parts" id="e">
+                <div>Andaman</div>
+                <ul>
+                    <li>Andaman Getaway<br>Duration: 6 Nights 7 Days<br>Tour Type: Standard<br>Price: Rs 10990 (Starting
+                        price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                    <li>Wow Andaman<br>Duration: 4 Nights 5 Days<br>Tour Type: Deluxe<br>Price: Rs 15990 (Starting price
+                        per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                    <li>Best of Andaman<br>Duration: 5 Nights 6 Days<br>Tour Type: Premium<br>Price: Rs 24990(Starting
+                        price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                </ul>
+            </div>
+            <div class="parts" id="f">
+                <div>North East</div>
+                <ul>
+                    <li>Fascinating North East-Air Inclusive<br>Duration: 6 Nights 7 Days<br>Tour Type:
+                        Standard<br>Price: Rs 36990 (Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                    <li>North Sikkim Delight<br>Duration: 5 Nights 6 Days<br>Tour Type: Deluxe<br>Price: Rs 38990
+                        (Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                    <li>Amazing North East<br>Duration: 5 Nights 6 Days<br>Tour Type: Premium<br>Price: Rs
+                        47990(Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                </ul>
+            </div>
+            <div class="parts" id="g">
+                <div>Jaipur</div>
+                <ul>
+                    <li>Jaipur-Air Inclusive<br>Duration: 6 Nights 5 Days<br>Tour Type: Standard<br>Price: Rs 10990
+                        (Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                    <li>Amazing Jaipur<br>Duration: 4 Nights 5 Days<br>Tour Type: Deluxe<br>Price: Rs 15990 (Starting
+                        price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                    <li>Best of Jaipur-Air Inclusive<br>Duration: 5 Nights 6 Days<br>Tour Type: Premium<br>Price: Rs
+                        24990(Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                </ul>
+            </div>
+            <div class="parts" id="h">
+                <div>Banglore</div>
+                <ul>
+                    <li>Exotic Banglore-Air Inclusive<br>Duration: 6 Nights 7 Days<br>Tour Type: Standard<br>Price: Rs
+                        27990 (Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                    <li>Customizable-Banglore<br>Duration: 4 Nights 5 Days<br>Tour Type: Deluxe<br>Price: Rs 37990
+                        (Starting price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                    <li>Magical Banglore<br>Duration: 9 Nights 10 Days<br>Tour Type: Premium<br>Price: Rs 52990(Starting
+                        price per adult)</li>
+                    <button style="cursor: pointer; color: white; background-color: tomato; border-color: black;">Book
+                        Online</button>
+                </ul>
+            </div>
+        </div>
+        <div id="aside" class="item">
+            <a href="#a">Ladakh</a>
+            <hr style="height:4px;width: 100%;border-width:0;color:rgb(15, 15, 15);background-color:rgb(15, 15, 15)">
+            <a href="#b">Goa</a>
+            <hr style="height:4px;width: 100%;border-width:0;color:rgb(15, 15, 15);background-color:rgb(15, 15, 15)">
+            <a href="#c">Kerela</a>
+            <hr style="height:4px;width: 100%;border-width:0;color:rgb(15, 15, 15);background-color:rgb(15, 15, 15)">
+            <a href="#d">Kashmir</a>
+            <hr style="height:4px;width: 100%;border-width:0;color:rgb(15, 15, 15);background-color:rgb(15, 15, 15)">
+            <a href="#e">Andaman</a>
+            <hr style="height:4px;width: 100%;border-width:0;color:rgb(15, 15, 15);background-color:rgb(15, 15, 15)">
+            <a href="#f">North East</a>
+            <hr style="height:4px;width: 100%;border-width:0;color:rgb(15, 15, 15);background-color:rgb(15, 15, 15)">
+            <a href="#g">Jaipur</a>
+            <hr style="height:4px;width: 100%;border-width:0;color:rgb(15, 15, 15);background-color:rgb(15, 15, 15)">
+            <a href="#h">Banglore</a>
+            <hr style="height:4px;width: 100%;border-width:0;color:rgb(15, 15, 15);background-color:rgb(15, 15, 15)">
+        </div>
+        <footer class="item">Designed and developed by Chandni Anwar Ansari.
+        </footer>
+
+    </div>
+</body>
+
+</html>
